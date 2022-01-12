@@ -1,0 +1,81 @@
+.services{
+    margin-top: 60px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.services .ser-cards{
+    margin-top: 80px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:auto;
+    color:white;
+    
+}
+ .services .ser-cards .ser-card{
+    background-color: white;
+    width: 300px;
+    margin:8px;
+    height: 250px;
+    border: 0.1px solid black;
+    z-index: 0;
+    
+}
+
+
+.ser-card > div img {
+    margin-top: 100px;
+    width: 50px;
+    height: 50px;  
+    transition: 1s ease-in-out;
+  } 
+
+  .ser-card > div div {
+    margin: 20px 0;
+    font-weight: bolder;
+    color:black;
+  }
+  .ser-card > div p{
+      display: none;
+  }
+
+  .services .ser-cards .ser-card:hover {
+      cursor:pointer;
+      border-color:  #088;
+      z-index:1;
+  }
+  .services .ser-cards .ser-card:hover > div img{
+      margin-top: -30px;
+
+  }
+
+  .services .ser-cards .ser-card:hover > div p{
+      display:block;
+      color: black;
+      /* transition: paragraph 0.5s ease-in-out; */
+      animation: fadeInAnimation ease-in-out 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      
+  }
+  @keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+ 
+  @media only screen and (max-width:360px){
+    .services .ser-cards {
+        flex-direction: column;
+    }
+    .services p{
+        text-align:start;
+    }
+    .services tag-line{
+        text-align: start;
+    }
+  }

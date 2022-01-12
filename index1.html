@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="intro.css">
+    <link rel="stylesheet" href="service.css">
+    <link rel="stylesheet" href="footer.css">
+    
+
+</head>
+<body>
+
+<!-- landing page -->
+    <header>
+        <nav id="navbar">
+            <input type="checkbox" id="check">
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            
+            <img src="/Assets/logo.png" alt="logo"  class="logo" id="nav-img"> 
+            <ul>
+                <li><a href="#">Intro</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Term</a></li>
+                <li><a href="#">Pricing</a></li>
+                <button class="button">Sign Up</button>
+            </ul>
+        </nav>
+            <div>
+                <div class="header-img"></div>
+              <div class="textonimage">
+                <p>Take care of your body.</p>
+                <h1>It's the only place you have to live.</h1>
+              </div>
+            </div>
+    </header>
+
+<!-- intro page -->
+    <section class="container" >
+           <div class="cards">
+                  <div class="card-title">Today's Schedule</div>
+                  <div class="card1-body">
+                      <div>
+                          <span>Early Exercise</span>
+                          <span>8:30-10:00</span>
+                      </div>
+                      <div>
+                        <span>Muscle Building</span>
+                        <span>8:30 - 10:00</span>
+                      </div>
+                      <div>
+                        <span>Cardio</span>
+                        <span>8:30 - 10:00</span>
+                      </div>
+                  </div>
+               
+           </div>
+   
+           <div class="cards">
+               <div class="card-title">Premier Membership</div>
+               <div class="card2-body">
+                   <div>Register today</div>
+                   <div>20% Discount</div>
+               </div>
+           </div>
+             
+   
+           <div class="cards">
+               
+               <div class="card-title">Happy Clients</div>
+               <div>
+                   I couldn't be more happy with the results!
+               </div>
+               <div>Adam Jordan</div>
+           </div>
+       </div>
+    </section> 
+ 
+
+<!-- service section -->
+    <div class="services">
+      <h1 style="text-align: center;">Services</h1>
+      <p id="tag-line" style="text-align: center;">Achieve the best results with our wide variety of training options!</p>
+    
+      <div class="ser-cards">
+        <div class="ser-card" >
+            <div>
+                <img src="/Assets/icons/heart-blue.png" alt="cardio" >
+                <div>Cardio Training</div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet fugit dolore harum autem deleniti, tempora tenetur obcaecati laboriosam ratione voluptatibus quas pariatur temporibus.</p>
+            </div>
+            
+        </div>
+        <div class="ser-card">
+            <div>
+                 <img src="/Assets/icons/guru-blue.png" alt="yoga">
+                 <div>Yoga Pilates</div>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel sed soluta doloribus dolor dolorem, hic delectus numquam quam fuga reprehenderit.</p>
+            </div>
+        </div>
+        
+        <div class="ser-card" >
+          <div>
+               <img src="/Assets/icons/weight-blue.png" alt="power">
+               <div>Power Training</div>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod accusantium asperiores, alias facilis sed cum non a enim.</p>
+          </div>          
+        </div>
+    </div>
+
+    
+
+<!-- footer area -->
+    <div class="footer1">
+        <!-- <h1>FOOTER</h1> -->
+    </div>
+    
+ <!-- script for sticky navbar -->
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+         function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+        </script> 
+    
+
+
+</body>
+</html>

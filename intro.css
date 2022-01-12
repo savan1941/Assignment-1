@@ -1,0 +1,64 @@
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:auto;
+    color:white;
+    margin-top: 500px;
+    flex-wrap:wrap;
+}
+.cards{
+   margin: 8px;
+   width:300px;
+   height: 300px;
+   padding:30px;
+}
+.cards:nth-child(1){
+    background: url(/Assets/table-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cards:nth-child(1) .card1-body > div{
+    border-bottom: 1px solid white;
+    display: flex;
+    padding: 15px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.cards:nth-child(1) .card1-body > div:last-child{
+    border-bottom: none;
+
+}
+.cards:nth-child(2){
+    background: url(/Assets/table-2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cards:nth-child(2) .card2-body > div{
+    margin-bottom: 8px;
+}
+.cards:nth-child(3){
+    background: url(/Assets/table-3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 360px){
+ .container .cards{
+     flex-direction: column;
+     /* margin:10px; */
+ }
+
+}

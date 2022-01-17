@@ -1,5 +1,12 @@
 .footer1{
-margin:30px;
-height: 50px;
+margin:0px;
+height: 200px;
+clip-path: polygon(0 86%, 100% 71%, 100% 100%, 0% 100%);
 background-color: rgb(228, 222, 222);
+}
+
+@media only screen and (max-width:360px){
+    .footer1{
+        display:none;
+    }
 }

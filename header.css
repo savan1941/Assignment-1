@@ -3,7 +3,9 @@
   padding:0;
   font-family:verdana;
   box-sizing: border-box;
+  
 }
+
 
 
 
@@ -14,6 +16,7 @@
       background-image: url(/Assets/header.jpg);
       background-size: cover;
       background-repeat: no-repeat;
+      background-position: center;
       position:absolute;
       transform: skewY(-2deg);
       transform-origin: left;
@@ -34,20 +37,23 @@
   /* navigation-bar */
     nav{
       width: 100%;
-      height: 100px;
-      line-height: 50px;
+      height: 60px;
+      line-height: 40px;
+      display: flex;
+      justify-content: space-between;
+      top:0;
+      align-items: center;
      
     }
     nav ul{
-      float:right;
-      margin-right: 150px;
-      margin-top: 30px;
-      display: flex;
+       margin-right: 150px;
+      /* margin-top: 30px;  */
+      position: relative;
+      
     }
     nav ul li{
       list-style-type: none;
       display: inline-block;
-      
     }
     nav ul li a:hover{
       color:#088;
@@ -55,15 +61,17 @@
     nav ul li a{
       text-decoration: none;
       color: #fff;
-      padding: 30px;
+      padding: 0px 30px;
+     
     }
     
     /* logo image on navbar */
      .logo{
       margin-left: 130px;
-      line-height: 50px; 
-      margin-top: 30px;
+      
    }
+
+  
     /* text on background image */
    .textonimage p {
       position: absolute;
@@ -72,20 +80,23 @@
       transform: translate(-50%, -50%);
       color: #fff;
       overflow: hidden;
-      font-size: 1rem;
+      font-size: 0.8rem;
      
     }
-     .textonimage  h1{
+     .textonimage  #para{
       position: absolute;
-      top: 58%;
+      top: 55%;
       left: 50%;
       transform: translate(-50%, -50%);
       color: #fff;
       overflow: hidden;
+      font-size: 25px;
+      /* font-size: 1rem; */
+      
       } 
 
     /* for automatic type writting */ 
-  .textonimage h1{
+  .textonimage #para{
       position: absolute;
       width: 0ch;
       overflow: hidden;
@@ -94,59 +105,132 @@
       animation-duration: 6s;
       animation: typewriter 4s steps(30) 0s 1 normal forwards, blinkTextCursor 500ms steps(30) infinite normal;
       border-right: 2px solid white;
-      /* animation: text 5s steps(28) infinite normal; */
-      /* animation-iteration-count: 28;
-      animation-direction: normal;
-      animation-timing-function: steps(30);
-      animation-fill-mode: forwards; */
-  
+
   }
-  
+
+    /* for sticky navbar */
+    .sticky {
+      position: fixed;
+      background-color: white;
+      top: 0;
+      width: 100%;
+      color: black; 
+      z-index: 1;
+}
+
+    .sticky #list {
+      color: #000;
+    }
+  #ham{
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    display: none;
+
+  }
+  .sticky #ham{
+    color: black;
+  }
+ 
+  #arrow{
+    display: none;
+
+  }
+
+
+
+
+
   /* for automatic type writting */
   @keyframes typewriter{
     from{width: 0;}
-    to{width: 650px;}
+    to{width: 500px;}
   }
   @keyframes blinkTextCursor{
     from{border-right-color: rgba(255,255,255,.75);}
     to{border-right-color: transparent;}
   }
   
-  /* for hamburger */
-  .hamburger{
-    font-size: 30px;
-    color:white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    display: none;
-    position: relative;
-  }
-  /* checkbox */
-  #check{
-    display: none;
-  }
-
-  /* for sticky navbar */
-  .sticky {
-    position: fixed;
-    background-color: white;
-    top: 0;
-    width: 100%;
-  }
  
   
   @media only screen and (max-width:360px){
     .logo{
       margin-left: 20px;
     }
-    .hamburger{
-      display: block;
-    }
+    
     nav ul{
-      display:none;
+      width: 360px;
+      height: 100vh; 
+      background-color: white;
+      margin-top: 680px;
+      display: none;
+      text-align: center;
+      left:0px;
+      z-index: 1;
+      position: fixed;
+      /* margin: 0;
+      padding: 0;
+      overflow: auto;
+      justify-content: center;
+    align-items: center; */
+}
+    nav ul li{
+      display: block;
+      line-height:0px;
+      margin-top: 80px;
+      
+     
+ }
+    nav ul li a{
+      color: black;
+}
+    .sticky #list {
+      display: none;
     }
-  
+    .sticky #button {
+      display: none;
+    }
+ 
+ 
+  .textonimage #para{
+    top: 55%;
+    left: 50%;
+    font-size: 16px;
+    /* transform: translate(-20%, -30%); */
+   
+  }
+  .textonimage #para{
+    position: absolute;
+    width: 0ch;
+    overflow: hidden;
+    white-space: nowrap;
+    animation-name: text;
+    animation-duration: 6s;
+    animation: typewriter 4s steps(30) 0s 1 normal forwards, blinkTextCursor 500ms steps(30) infinite normal;
+    border-right: 2px solid white;
+}
+
+  #ham{
+    display: block;
+}
+  #arrow{
+    color:white;
+    background-color: #89CFF0;
+    padding:10px ;
+    margin-top: 240px;
+    display: block;
+    font-size: 30px;
+    overflow: hidden;
+    bottom:0;
+    
+  }
+
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 320px;}
+}
+
+
   }
   
   

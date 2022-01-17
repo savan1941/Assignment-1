@@ -15,28 +15,30 @@
 <body>
 
 <!-- landing page -->
-    <header>
+    <header class="header">
+
         <nav id="navbar">
-            <input type="checkbox" id="check">
-            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-            
-            <img src="/Assets/logo.png" alt="logo"  class="logo" id="nav-img"> 
-            <ul>
-                <li><a href="#">Intro</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Term</a></li>
-                <li><a href="#">Pricing</a></li>
-                <button class="button">Sign Up</button>
+            <img src="/Assets/logo.png" alt="logo"  class="logo" id="logo">
+            <ul id="menu">
+                <li><a href="#"  id="list">Intro</a></li>
+                <li><a href="#"  id="list">Services</a></li>
+                <li><a href="#"  id="list">Term</a></li>
+                <li><a href="#"  id="list">Pricing</a></li>
+                <li><button class="button" id="button">Sign Up</button></li>
+                <span id="arrow" onclick="hamburger()">&#8593;</span>
             </ul>
+            <span onclick="hamburger()" id="ham">&#9776</span>
         </nav>
-            <div>
-                <div class="header-img"></div>
+          
+    </header>
+            <div id="bg-img">
+            <div class="header-img"></div>
               <div class="textonimage">
                 <p>Take care of your body.</p>
-                <h1>It's the only place you have to live.</h1>
+                <h1 id="para">It's the only place you have to live.</h1>
               </div>
             </div>
-    </header>
+   
 
 <!-- intro page -->
     <section class="container" >
@@ -81,7 +83,7 @@
  
 
 <!-- service section -->
-    <div class="services">
+<div class="services">
       <h1 style="text-align: center;">Services</h1>
       <p id="tag-line" style="text-align: center;">Achieve the best results with our wide variety of training options!</p>
     
@@ -110,6 +112,7 @@
           </div>          
         </div>
     </div>
+</div>
 
     
 
@@ -123,15 +126,42 @@
         window.onscroll = function() {myFunction()};
         
         var navbar = document.getElementById("navbar");
+        var logo = document.getElementById("logo");
+        var list = document.getElementById("list");
         var sticky = navbar.offsetTop;
          function myFunction() {
-          if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-          } else {
+          if (window.pageYOffset > sticky) {
+            navbar.classList.add("sticky");
+            logo.src="Assets/logo-active.png"
+
+          } 
+          else {
             navbar.classList.remove("sticky");
+            
           }
         }
-        </script> 
+
+        function hamburger(){
+            var x = document.getElementById("menu");
+
+            if(x.style.display == "block"){
+                x.style.display = "none"; 
+                navbar.classList.remove("sticky");
+      
+            
+            }
+           
+            else{
+                x.style.display = "block"
+            }
+        }
+
+ 
+        
+
+      </script>
+          
+
     
 
 
